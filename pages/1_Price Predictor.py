@@ -2,7 +2,7 @@ import streamlit as st
 import pickle
 import pandas as pd
 import numpy as np
-import gzip
+
 
 st.set_page_config(page_title="Viz Demo")
 
@@ -12,8 +12,7 @@ with open('df.pkl','rb') as file:
     df = pickle.load(file)
 
 
-with gzip.open('compressed.pkl.gz', 'rb') as file:
-    pipeline = pickle.load(file)
+
 
 
 
