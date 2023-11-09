@@ -14,7 +14,8 @@ st.title('Analytics')
 new_df = pd.read_csv('datasets/data_viz1.csv')
 feature_text = pickle.load(open('datasets/feature_text.pkl','rb'))
 
-group_df = new_df.groupby('sector').mean()[['price','price_per_sqft','built_up_area','latitude','longitude']]
+group_df = new_df.groupby('sector').mean(numeric_only=True)[['price','price_per_sqft','built_up_area','latitude','longitude']]
+
 
 st.header('Sector Price per Sqft Geomap')
 fig = px.scatter_mapbox(group_df, lat="latitude", lon="longitude", color="price_per_sqft", size='built_up_area',
