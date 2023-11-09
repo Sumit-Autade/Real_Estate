@@ -9,3 +9,4 @@ wordcloud==1.9.2
 pickleshare==0.7.5
 cloudpickle==2.2.1
 pickleshare==0.7.5
+python==3.11.3
