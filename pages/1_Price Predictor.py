@@ -8,8 +8,8 @@ st.set_page_config(page_title="Viz Demo")
 with open('df.pkl','rb') as file:
     df = pickle.load(file)
 
-with open('Pipe.pkl','rb') as file:
-    pipeline = pickle.load(file)
+with open('Pipe.pkl','rb') as file1:
+    pipeline = pickle.load(file1)
 
 
 st.header('Enter your inputs')
