@@ -9,7 +9,7 @@ st.set_page_config(page_title="Viz Demo")
 with open('df.pkl','rb') as file:
     df = dill.load(file)
 
-with open('Pipe.pkl','rb') as file1:
+with open('Pipe1.pkl','rb') as file1:
     pipeline = dill.load(file1)
 
 
