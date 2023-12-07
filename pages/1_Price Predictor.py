@@ -2,7 +2,7 @@ import streamlit as st
 import pickle
 import pandas as pd
 import numpy as np
-import dill
+
 
 
 st.set_page_config(page_title="Viz Demo")
@@ -10,8 +10,8 @@ st.set_page_config(page_title="Viz Demo")
 with open('df.pkl','rb') as file:
     df = pickle.load(file)
 
-with open('dillPipeline.pkl','rb') as file1:
-    pipeline = dill.load(file1)
+with open('pipeline.pkl','rb') as file1:
+    pipeline = pickle.load(file1)
 
 
 st.header('Enter your inputs')
